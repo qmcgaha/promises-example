@@ -1,4 +1,4 @@
-let promise = fetch("coffee.jpg");
+let promise = fetch("cofee.jpg");
 let promise2 = promise.then(response => response.blob());
 let promise3 = promise2.then(myBlob => {
   let objectURL = URL.createObjectURL(myBlob);
@@ -6,3 +6,6 @@ let promise3 = promise2.then(myBlob => {
   image.src = objectURL;
   document.body.appendChild(image);
 })
+let errorCase = promise3.catch(e => {
+  console.log("There has been a problem with your fetch operation: " + e.message);
+});
