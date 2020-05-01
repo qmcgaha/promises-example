@@ -1,4 +1,4 @@
-let promise = fetch("cofee.jpg");
+let promise = fetch("coffee.jg");
 let promise2 = promise.then(response => response.blob());
 let promise3 = promise2.then(myBlob => {
   let objectURL = URL.createObjectURL(myBlob);
